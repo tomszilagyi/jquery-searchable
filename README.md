@@ -1,7 +1,7 @@
 jQuery Searchable Plugin
 ========================
 
-*Latest version: v1.1.0* (View the [changelog](#changelog))
+*Latest version: v1.1.2* (View the [changelog](#changelog))
 
 Tiny, fast jQuery plugin to search through elements as you type. This plugin is created and maintained by **Stidges** ( [Twitter](http://twitter.com/stidges) | [Github](http://github.com/stidges) ).
 
@@ -114,6 +114,10 @@ $( '#element' ).searchable({
 
 - Added onAfterSearch callback.
 - Added ignoreDiacritics option. Default is false so it should be backwards compatible.
+
+**Version 1.1.2:**
+
+- Added searchType `helm` to support incremental narrowing on multiple space-separated keyword fragments as in Emacs Helm.
 
 ## Contributing & Issues
 
