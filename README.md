@@ -51,7 +51,7 @@ This plugin provides the following configuration options:
 | evenRow | `{ }` | Defines the CSS object to apply to the even rows (when `striped` is set to `true`). |
 | hide | `function` | Allows you to define a custom hiding function. This function accepts one parameter, which is the element (row) being hidden. By default it will use `elem.hide()` to hide the row. |
 | show | `function` | Allows you to define a custom show function. This function accepts one parameters, which is the element (row) being hidden. By default it will use `elem.show()` to show the row. |
-| searchType | `'default'` | Defines the matcher to be used when searching. Allowed values are `'fuzzy'`, `'strict'` and `'default'`. |
+| searchType | `'default'` | Defines the matcher to be used when searching. Allowed values are `'fuzzy'`, `'helm'`, `'strict'` and `'default'`. |
 | onSearchActive | `false` | Allows you to define a function to be called when the search is active. This function will be called whenever the user is typing into the search input and the search input is not empty. The searchable element and the search term will be passed to the function. |
 | onSearchEmpty | `false` | Allows you to define a function to be called when the search input is empty. This function will be called once when the search input is empty or cleared. The searchable element will be passed to the function. |
 | onSearchFocus | `false` | Allows you to define a function to be called when the search input is focussed. The `this` context of this function will be the search input element. |

@@ -176,6 +176,8 @@
                 return this.getFuzzyMatcher;
             } else if ( type === 'strict' ) {
                 return this.getStrictMatcher;
+            } else if ( type === 'helm' ) {
+                return this.getHelmMatcher;
             }
 
             return this.getDefaultMatcher;
@@ -199,6 +201,20 @@
 
             return function( s ) {
                 return ( s.indexOf( term ) !== -1 );
+            };
+        },
+
+        getHelmMatcher: function( term ) {
+            term = $.trim( term );
+            var patterns = term.split( ' ' );
+            var matchers = patterns.map(function (p) {
+                return new RegExp(p, 'i');
+            });
+
+            return function( s ) {
+                return matchers.every(function(m) {
+                    return m.test( s );
+                });
             };
         },
 
