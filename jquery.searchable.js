@@ -1,8 +1,9 @@
 ﻿/*!
- * jQuery Searchable Plugin v1.1.2
- * https://github.com/stidges/jquery-searchable
+ * jQuery Searchable Plugin
+ * https://github.com/tomszilagyi/jquery-searchable
  *
  * Copyright 2014 Stidges
+ * Copyright 2020 Tom Szilagyi
  * Released under the MIT license
  */
 ;(function( $, window, document, undefined ) {
@@ -15,6 +16,7 @@
             striped: false,
             oddRow: { },
             evenRow: { },
+            getContent: function( elem ) { return elem.text(); },
             hide: function( elem ) { elem.hide(); },
             show: function( elem ) { elem.show(); },
             searchType: 'default',
@@ -155,7 +157,7 @@
                 hide       = true;
 
                 for ( x = 0; x < childCount; x++ ) {
-                    contentText = $( children[ x ] ).text();
+                    contentText = this.settings.getContent($( children[ x ] ));
                     contentText = this.removeDiacritics(contentText);
                     if ( matcher( contentText ) ) {
                         hide = false;
